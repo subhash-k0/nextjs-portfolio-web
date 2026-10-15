@@ -1,27 +1,20 @@
-import { Outfit, Ovo} from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({
-  subsets: ["latin"], weight: ["400", "500", "600", "700"]
-});
-
-const ovo = Ovo({
-  subsets: ["latin"], weight: ["400"]
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
-  title: "Next.js Portfolio App",
-  description: "A simple portfolio app built with Next.js",
+  title: "John Doe | Full Stack Developer",
+  description: "Portfolio of John Doe, a full stack developer.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-    
-      className={`${outfit.className} ${ovo.className} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${outfit.className} antialiased`}>
+      <body className="flex min-h-screen flex-col">{children}</body>
     </html>
   );
 }

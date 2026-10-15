@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
-*{
-  font-family: "Outfit";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #fcfbff;
+  color: #0f172a;
+}
+
+::selection {
+  background: #ede9fe;
+  color: #312e81;
 }
